@@ -3,7 +3,9 @@ FROM tensorflow/tensorflow
 RUN pip install --upgrade pip && \
     pip install --upgrade protobuf \
     pip install grpcio grpcio-tools \
-    pip install -r requirements.txt
+    pip install scikit-learn \
+    pip install numpy \
+    pip install matplotlib
 
 ADD . /app
 ADD ./data /data
