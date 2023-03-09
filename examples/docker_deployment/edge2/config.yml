@@ -1,0 +1,14 @@
+type: edge
+logLevel: debug
+notification:
+  type: push
+  stewardServerURI: ":9080"
+operatorGrpcServerURI: operator:8787
+appGrpcServerURI: app:7878
+gitUserToken: 1qaz_WSX
+aggregatorModelRepo:
+  gitHttpURL: http://nycuedge@flserver.japaneast.cloudapp.azure.com/gitea/global-model.git
+edgeModelRepo:
+  gitHttpURL: http://flserver.japaneast.cloudapp.azure.com/gitea/NYCU-model
+trainPlanRepo:
+  gitHttpURL: http://nycuedge@flserver.japaneast.cloudapp.azure.com/gitea/train-plan.git
