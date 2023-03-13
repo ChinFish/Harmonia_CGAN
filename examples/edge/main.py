@@ -29,7 +29,7 @@ def train(baseModel, output_model_path, epochs=1):
     test_data = r'data/chr22_TWB_1003_test.vcf.gz'
     tag_pos = r'data/chr22_TWB_1003_tag.position'
     all_pos = r'data/chr22_TWB_1003.position'
-    save_model = r'./model/temp'
+    # save_model = r'./model/temp'
     output = os.path.join("/repos", output_model_path, 'weights.tar')
     logging.info(f'input path: [{baseModel.path}]')
     logging.info(f'output path: [{output}]')
@@ -117,8 +117,4 @@ def serve():
 
 
 if __name__ == "__main__":
-    # serve()
-    metrics = train_Fed.gain(data='train/chr22_train_TWB_100.hap',
-                             output=r'C:\Users\yayalouis123\Desktop\harmonia\src\fedavg\Aggregate_test\model_3',
-                             epochs=1)
-    print(metrics)
+    serve()
