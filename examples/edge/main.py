@@ -8,7 +8,7 @@ import service_pb2
 import service_pb2_grpc
 # import mnist
 # import torch
-import train
+from train import *
 import tensorflow as tf
 
 OPERATOR_URI = os.getenv('OPERATOR_URI', "localhost:8787")
@@ -37,7 +37,7 @@ def train(baseModel, output_model_path, epochs=1):
 
     base_weight_path = os.path.join("/repos", baseModel.path, "weights.tar")
     try:
-        metrics = train.gain(train_data=train_data, test_data=test_data, tag_pos=tag_pos, all_pos=all_pos,
+        metrics = gain(train_data=train_data, test_data=test_data, tag_pos=tag_pos, all_pos=all_pos,
                              output=output, epochs=epochs, resume=base_weight_path)
         # metrics = train.gain(data, output, epochs=epochs, resume=base_weight_path)
     except Exception as err:
